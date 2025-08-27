@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cell Shopping - Assistência Técnica e Acessórios</title>
+  
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/rmHnhmx1/2023-02-11-removebg-preview.png" />
+
   <style>
     /* ===== RESET ===== */
     * {
@@ -14,31 +18,31 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #000;
+      background-color: #000; /* fundo preto */
       color: #fff;
       text-align: center;
     }
 
     /* ===== HEADER ===== */
     header {
-      background: linear-gradient(135deg, #1a1a1a, #333); /* fundo escuro para destacar o laranja */
-      padding: 30px 10px 20px;
-      position: relative;
+      background-color: #000; /* totalmente preto */
+      padding: 40px 10px 30px;
+      text-align: center;
     }
 
     header img {
       max-width: 200px;
       transition: 0.3s;
-      filter: drop-shadow(2px 2px 8px #000); /* destaca logo */
+      filter: drop-shadow(3px 3px 10px #ff7a00); /* destaca logo */
     }
     header img:hover {
       transform: scale(1.05);
     }
 
     h1 {
-      color: #ff7a00; /* laranja para destacar sobre fundo escuro */
-      margin: 10px 0 0;
-      text-shadow: 2px 2px 8px #000;
+      color: #ff7a00; /* destaque laranja */
+      margin: 15px 0 5px;
+      text-shadow: 2px 2px 5px #000;
       transition: 0.3s;
     }
     h1:hover {
@@ -47,12 +51,12 @@
 
     p {
       font-size: 18px;
-      margin: 10px 0;
-      color: #ffcc80; /* laranja claro para contraste com fundo escuro */
+      margin: 8px 0;
+      color: #fff; 
     }
 
     a {
-      color: #ff7a00;
+      color: #ff7a00; /* laranja para links */
       text-decoration: none;
     }
 
@@ -60,13 +64,15 @@
     .contact {
       margin: 30px 0;
       font-size: 18px;
+      background-color: #000; /* fundo preto */
+      padding: 20px 0;
     }
 
     .whatsapp-button {
       display: inline-block;
       margin-top: 20px;
       padding: 14px 28px;
-      background: linear-gradient(135deg, #25d366, #128c7e);
+      background-color: #25d366;
       color: #fff;
       font-size: 18px;
       border-radius: 8px;
@@ -78,21 +84,7 @@
     }
     .whatsapp-button:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 15px #25d366;
-    }
-    .whatsapp-button::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: -100%;
-      background: rgba(255,255,255,0.2);
-      transform: skewX(-20deg);
-      transition: 0.5s;
-    }
-    .whatsapp-button:hover::after {
-      left: 100%;
+      box-shadow: 0 0 20px #25d366;
     }
 
     /* ===== GALERIA ===== */
@@ -102,6 +94,7 @@
       justify-content: center;
       gap: 20px;
       padding: 20px;
+      background-color: #000; /* fundo preto */
     }
 
     .gallery div {
@@ -116,19 +109,19 @@
       width: 220px;
       height: 220px;
       object-fit: cover;
-      border: 2px solid #ff7a00;
-      border-radius: 10px;
+      border-radius: 12px;
       transition: 0.3s;
+      border: 2px solid #ff7a00; /* só borda das imagens */
     }
 
     .gallery div:hover img {
       transform: scale(1.1) rotate(3deg);
-      box-shadow: 0 0 20px #ff7a00;
+      box-shadow: 0 0 25px #ff7a00;
       border-color: #fff;
     }
 
     .gallery p {
-      margin-top: 8px;
+      margin-top: 10px;
       font-weight: bold;
       color: #ff7a00;
       font-size: 16px;
@@ -142,14 +135,16 @@
 
     /* ===== DESTAQUE ===== */
     .destaque {
-      padding: 40px 20px;
-      background: #111;
-      margin-top: 20px;
+      padding: 50px 20px;
+      background-color: #000; /* fundo preto */
+      margin-top: 30px;
+      border-top: 0; /* remove listras */
+      border-bottom: 0; /* remove listras */
     }
 
     .destaque h2 {
       color: #ff7a00;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       text-shadow: 1px 1px 5px #000;
       transition: 0.3s;
     }
@@ -158,15 +153,19 @@
     }
 
     .destaque img {
-      width: 200px;
+      width: 220px;
       border-radius: 12px;
-      border: 2px solid #ff7a00;
+      border: 3px solid #ff7a00; /* só borda da imagem */
       animation: pulse 2s infinite;
+      transition: 0.3s;
+    }
+    .destaque img:hover {
+      transform: scale(1.08);
     }
 
     .destaque p {
-      margin: 10px 0;
-      font-size: 18px;
+      margin: 12px 0;
+      font-size: 20px;
       color: #ff7a00;
       font-weight: bold;
     }
@@ -179,15 +178,16 @@
 
     /* ===== FOOTER ===== */
     footer {
-      background: linear-gradient(135deg, #000, #222);
-      padding: 20px;
-      color: #eee;
+      background-color: #000; /* totalmente preto */
+      padding: 25px;
+      color: #fff;
       font-size: 14px;
       margin-top: 30px;
     }
 
     footer p {
       margin: 6px 0;
+      font-weight: bold;
     }
 
     /* ===== RESPONSIVO ===== */
@@ -197,7 +197,7 @@
         height: 160px;
       }
       .destaque img {
-        width: 150px;
+        width: 160px;
       }
     }
   </style>
@@ -205,7 +205,6 @@
 <body>
 
   <header>
-    <!-- LOGO -->
     <img src="https://i.postimg.cc/rmHnhmx1/2023-02-11-removebg-preview.png" alt="Cell Shopping Logo" />
     <h1>Cell Shopping</h1>
     <p>Assistência Técnica e Acessórios</p>
@@ -221,7 +220,6 @@
     </a>
   </div>
 
-  <!-- GALERIA -->
   <div class="gallery">
     <div>
       <img src="https://i.ibb.co/jPFzmZkk/Pngtree-airpods-9149137.png" alt="AirPods" />
@@ -244,7 +242,6 @@
     </div>
   </div>
 
-  <!-- PRODUTO EM DESTAQUE -->
   <section class="destaque">
     <h2>🔥 Produto em Destaque</h2>
     <img src="https://i.postimg.cc/8Czg97J9/image.png" alt="Fone Sem Fio">
